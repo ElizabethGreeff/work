@@ -141,15 +141,18 @@ nav a.active {
     padding: 2rem;
     border-radius: 1rem;
     backdrop-filter: blur(4px);
+    width: 60%;
+    height: 40%;
+    padding: 2rem;
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.7rem;
 }
 
 .btn {
@@ -274,7 +277,7 @@ nav a.active {
     height: 40px;
     margin-bottom: 1rem;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-    color: var(--dark);
+    fill: var(--dark);
 }
 
 .activity p {
