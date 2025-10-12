@@ -20,4 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.querySelectorAll('.activity').forEach((el) => observer.observe(el));
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("show");
+        });
+    }
+    
 });

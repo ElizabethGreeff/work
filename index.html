@@ -9,7 +9,7 @@
         rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bungalow Bliss Rentals</title>
+    <title>Home | Paradise Getaways</title>
     <link rel="stylesheet" href="styles/homepage.css">
     <script src="scripts/homepage.js" defer></script>
 </head>
@@ -17,14 +17,22 @@
 <body>
     <header>
         <div class="logo">
-            <h1>Bungalow Bliss</h1>
+            <img src="images/womens-idea.webp" alt="Paradise Getaways Logo">
+            <h1>Paradise Getaways</h1>
         </div>
-        <nav>
-            <ul class="nav-links">
+    
+        <nav class="navbar">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Rentals</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="about.html">Book</a></li>
+                <li><a href="map.html">About</a></li>
+                <li><a href="restaurant.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -52,7 +60,7 @@
                 <p>Private space designed for rest and reflection.</p>
             </div>
             <div class="card-fade-in">
-                <img src="images/womens-idea.webp" alt="Womens Bungalow" loading="lazy">
+                <img src="images/womens-idea.webp" alt="Womens Bungalow" loading="lazy" >
                 <h3>Womens Escape</h3>
                 <p>Soft interiors and spa-inspired touches.</p>
             </div>
@@ -67,27 +75,31 @@
     <section class="activities-banner">
         <h2>Relax & Enjoy Your Stay</h2>
         <div class="activities">
-            <div class="activity">
-                <img src="images/pool.svg" alt="Swimming Pool">
+            <a href="activities.html"> <div class="activity">
+                <img src="images/pool.svg" alt="Swimming Pool" loading="lazy">
                 <p>Swimming Pool</p>
             </div>
-            <div class="activity">
-                <img src="images/security.svg" alt="Security Onsite">
+            </a>
+
+            <a href="activities.html"><div class="activity">
+                <img src="images/security.svg" alt="Security Onsite" loading="lazy">
                 <p>Security Onsite</p>
-            </div>
-            <div class="activity">
-                <img src="images/volleyball.svg" alt="Volleyball">
+            </div></a>
+
+            <a href="activities.html"><div class="activity">
+                <img src="images/volleyball.svg" alt="Volleyball" loading="lazy">
                 <p>Volleyball</p>
-            </div>
-            <div class="activity">
-                <img src="images/parking.svg" alt="Secure Off-Street Parking">
+            </div></a>
+
+            <a href="activities.html"><div class="activity">
+                <img src="images/parking.svg" alt="Secure Off-Street Parking" loading="lazy">
                 <p>Free Secure Parking</p>
-            </div>
+            </div></a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Bungalow Bliss Rentals</p>
+        <p>&copy; 2025 Paradise Getaways. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
