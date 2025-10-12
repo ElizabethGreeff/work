@@ -147,6 +147,7 @@ nav a.active {
 }
 
 .hero h2 {
+    margin-top: 1rem;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
