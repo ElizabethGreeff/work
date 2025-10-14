@@ -140,10 +140,9 @@ nav a.active {
     background: rgba(47, 62, 47, 0.6);
     padding: 2rem;
     border-radius: 1rem;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
     width: 60%;
     height: 40%;
-    padding: 2rem;
 }
 
 .hero h2 {
@@ -165,6 +164,7 @@ nav a.active {
     display: inline-block;
     transition: all 0.3s ease;
     font-style: italic;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
@@ -204,6 +204,8 @@ nav a.active {
 
 .card-fade-in img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     display: block;
 }
 
@@ -273,11 +275,11 @@ nav a.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.activity img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+.activity svg {
+    width: 60px;
+    stroke: var(--dark);
+}
+.voleyball {
     fill: var(--dark);
 }
 
@@ -290,6 +292,98 @@ nav a.active {
 .activity.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ====== IMAGE MODAL GALLERY ====== */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(47, 62, 47, 0.9);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease;
+}
+
+.image-modal.show {
+    display: flex;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.modal-img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.image-modal.show .modal-img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 35px;
+    height: 35px;
+    fill: var(--primary);
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn:hover {
+    fill: var(--neutral);
+    transform: scale(1.1);
+}
+
+/* Gallery nav buttons */
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    color: var(--neutral);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.gallery-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 40px;
+}
+
+.next {
+    right: 40px;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -322,12 +416,51 @@ footer {
         width: 100vw;
         height: 60vh;
     }
+
+    .hero-text {
+        width: 70%;
+        padding: 1rem;
+        height: 70%;
+    }   
+
+    .hero h2 {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
 }
 
 @media (max-width: 968px) {
     .video-container {
         width: 100vw;
         height: 50vh;
+    }
+    .hero-text {
+        width: 80%;
+        padding: 1rem;
+        height: 70%;
+    }
+
+    .hero h2 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 }
 
@@ -498,10 +631,21 @@ footer {
 
     .hero-text {
         width: 70%;
+        height: 85%;
         padding: 1rem;
     }
 
     .hero h2 {
-        font-size: 1.5rem;
+       
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
     }
 }
