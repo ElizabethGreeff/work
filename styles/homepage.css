@@ -276,11 +276,8 @@ nav a.active {
 }
 
 .activity svg {
-    width: 60px;
+    width: 50px;
     stroke: var(--dark);
-}
-.voleyball {
-    fill: var(--dark);
 }
 
 .activity p {
