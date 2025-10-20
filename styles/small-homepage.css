@@ -53,7 +53,7 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     body {
         background-color: var(--neutral);
@@ -181,9 +181,9 @@
         align-items: center;
     }
 
-    .video-container {
+    .video-container iframe{
         width: 100vw;
-        height: 30vh;
+        height: 100vh;
     }
 
     .hero-text {
