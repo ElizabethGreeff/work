@@ -1,5 +1,5 @@
-.permanent-marker-regular {
-    font-family: "Permanent Marker", cursive;
+.caesar-dressing-regular {
+    font-family: "Caesar Dressing", system-ui;
     font-weight: 400;
     font-style: normal;
 }
@@ -22,7 +22,7 @@
     --neutral: #f0ede3;
     /* background neutral */
     --transition: 0.4s ease;
-    --heading-font: "Permanent Marker", cursive;
+    --heading-font: "Caesar Dressing", system-ui;
     --body-font: "Zain", sans-serif;
 }
 
