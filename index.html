@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Paradise Getaways</title>
     <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/small-homepage.css">
     <script src="scripts/homepage.js" defer></script>
 </head>
 
@@ -49,6 +50,36 @@
             <p>Relax. Recharge. Rediscover your peace in our cozy coastal bungalows.</p>
             <a href="https://www.lekkeslaap.co.za/" class="btn">Book Now</a>
         </div>
+    </section>
+
+    <section class="getaway-options">
+        <h2>Choose your getaway</h2>
+    
+        <div class="getaway-buttons">
+            <div class="getaway-option">
+                <img src="images/getaway-option-1.webp" alt="Self-catering bungalow" loading="lazy">
+                <div class="overlay">Self-catering Bungalows</div>
+            </div>
+            <div class="getaway-option">
+                <img src="images/getaway-option-2.webp" alt="Caravan sites" loading="lazy">
+                <div class="overlay">Caravan Sites</div>
+            </div>
+            <div class="getaway-option">
+                <img src="images/getaway-option-3.webp" alt="Tenting sites" loading="lazy">
+                <div class="overlay">Tenting Sites</div>
+            </div>
+        </div>
+    
+        <p class="intro-text">
+            Just a 10-minute walk from Pringle Bay beach, Paradise Getaways is the perfect escape for
+            day visitors, large groups, and company functions alike.
+        </p>
+    
+        <p class="intro-text">
+            Enjoy a refreshing swim in our large pool, keep the little ones entertained in our kiddies' center,
+            and grab a bite or essentials at our well-stocked café and emergency store. From braais and tinned food
+            to sleeping bags and tent pegs — we've got everything you need for a perfect stay!
+        </p>
     </section>
 
     <section class="bungalows">
@@ -193,6 +224,26 @@
         <button class="gallery-btn prev" id="prevBtn">&#10094;</button>
         <button class="gallery-btn next" id="nextBtn">&#10095;</button>
     </div>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-intro" id="contactIntro">
+            <p>We'd love to hear from you! Whether you have questions, special requests, or just want to say hello, send us a
+                message below.</p>
+        </div>
+    
+        <form id="contactForm" action="https://formspree.io/f/xgvnboor" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    
+        <div id="formResponse" class="form-response" style="display: none;">
+            <h3>Message sent!</h3>
+            <p>Thank you for reaching out — we'll get back to you soon.</p>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Paradise Getaways. All rights reserved.</p>

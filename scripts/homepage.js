@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 
-// === IMAGE GALLERY MODAL (multiple sets) ===
+// === IMAGE GALLERY MODEL ===
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
@@ -107,4 +107,53 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeModal();
     });
+});
+
+// ====== CONTACT FORM HANDLER ======
+
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contactForm");
+    const thankYouMessage = document.getElementById("thankYouMessage");
+    const contactIntro = document.getElementById("contactIntro");
+
+    if (contactForm && thankYouMessage) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault(); 
+            contactIntro.style.display = "none";
+            contactForm.style.display = "none";
+            thankYouMessage.classList.add("show");
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const responseBox = document.getElementById("formResponse");
+
+    if (form) {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const res = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+
+                if (res.ok) {
+                    form.style.display = "none";
+                    responseBox.style.display = "block";
+                } else {
+                    alert("Oops! Something went wrong. Please try again later.");
+                }
+            } catch (err) {
+                alert("Error sending message. Please check your connection.");
+            }
+        });
+    }
 });
