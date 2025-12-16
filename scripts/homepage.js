@@ -39,6 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalImg = document.getElementById("modalImg");
     const closeBtn = document.getElementById("closeModal");
     const prevBtn = document.getElementById("prevBtn");
+
+
+
+
+
+
+    
     const nextBtn = document.getElementById("nextBtn");
 
     // Galleries for each bungalow
